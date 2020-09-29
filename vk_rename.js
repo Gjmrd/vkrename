@@ -14,6 +14,10 @@
         "l_gr": "Группы",
         "l_msg": "Сообщения"
     };
+    const titles = {
+        "im": "Сообщения",
+        "groups": "Группы"
+    };
     Object.keys(labels).forEach(key => {
     const menuItem = document.getElementById(key);
     if (menuItem != undefined) {
@@ -22,5 +26,10 @@
             menuItemLabel.textContent = labels[key];
         }
     }
+    Object.keys(titles).forEach(path => {
+        if (window.location.pathname === `/${path}`) {
+            document.title = titles[path];
+        };
+    });
 })
 })();
