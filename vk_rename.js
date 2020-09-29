@@ -15,9 +15,9 @@
         "l_msg": "Сообщения"
     };
     Object.keys(labels).forEach(key => {
-    var menuItem = document.getElementById(key);
+    const menuItem = document.getElementById(key);
     if (menuItem != undefined) {
-        var menuItemLabel = menuItem.querySelector(".left_label");
+        const menuItemLabel = menuItem.querySelector(".left_label");
         if (menuItemLabel != undefined) {
             menuItemLabel.textContent = labels[key];
         }
